@@ -33,14 +33,133 @@
             <!-- Main content area for all screens -->
             <div class="col-12 col-md-8">
                 {{ content }}
-                
+                <canvas id="lifeCanvas"></canvas>
+
             </div>
+            
         </div>
     </div>
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const canvas = document.getElementById('lifeCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            const parent = canvas.parentElement;
+            const rect = parent.getBoundingClientRect();
+            canvas.width = rect.width-15;
+            // Set a fixed height or make it responsive based on your design
+            canvas.height = 250; // Or set to a specific value
+
+            
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const resolution = 10; // Adjust this value if you want different cell sizes
+        const cols = Math.floor(canvas.width / resolution);
+        const rows = Math.floor(canvas.height / resolution);
+
+        let grid = buildGrid();
+
+        function buildGrid() {
+            return new Array(cols).fill(null)
+                .map(() => new Array(rows).fill(null)
+                .map(() => Math.floor(Math.random() * 2)));
+        }
+
+        function drawGrid() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let col = 0; col < grid.length; col++) {
+                for (let row = 0; row < grid[col].length; row++) {
+                    const cell = grid[col][row];
+                    ctx.beginPath();
+                    ctx.rect(col * 10, row * 10, 10, 10);
+                    ctx.fillStyle = cell ? '#76ABA8' : '#222831';
+                    ctx.fill();
+                }
+            }
+        }
+
+        function nextGenGrid(grid) {
+            const nextGen = grid.map(arr => [...arr]);
+            for (let col = 0; col < grid.length; col++) {
+                for (let row = 0; row < grid[col].length; row++) {
+                    const cell = grid[col][row];
+                    let numNeighbors = 0;
+                    for (let i = -1; i < 2; i++) {
+                        for (let j = -1; j < 2; j++) {
+                            if (i === 0 && j === 0) continue;
+                            // Calculate x and y positions with wrap-around
+                            const x_cell = (col + i + cols) % cols;
+                            const y_cell = (row + j + rows) % rows;
+                            // Add the neighbor's state to the total
+                            numNeighbors += grid[x_cell][y_cell];
+                        }
+                    }
+                    // The rules of life
+                    if (cell === 1 && numNeighbors < 2) {
+                        nextGen[col][row] = 0;
+                    } else if (cell === 1 && numNeighbors > 3) {
+                        nextGen[col][row] = 0;
+                    } else if (cell === 0 && numNeighbors === 3) {
+                        nextGen[col][row] = 1;
+                    }
+                }
+            }
+            return nextGen;
+        }
+        
+
+        function update() {
+            grid = nextGenGrid(grid);
+            drawGrid();
+        
+            // Randomly add a glider with a 1% chance on each update
+            if (Math.random() < 0.01) {
+                addRandomGlider();
+            }
+        
+            // Use setTimeout to control the frequency of updates
+            setTimeout(update, 150); // Adjust the delay as needed, 100ms here
+        }
+        
+        function addRandomGlider() {
+            // Define a simple glider pattern
+            const glider = [
+                [0, 1, 0],
+                [0, 0, 1],
+                [1, 1, 1]
+            ];
+        
+            // Choose a random position for the glider that ensures it fits in the grid
+            const x = Math.floor(Math.random() * (cols - 3));
+            const y = Math.floor(Math.random() * (rows - 3));
+        
+            // Place the glider on the grid
+            for (let i = 0; i < glider.length; i++) {
+                for (let j = 0; j < glider[i].length; j++) {
+                    grid[x + i][y + j] = glider[i][j];
+                }
+            }
+        }
+        
+
+        // Ensure there's a glider in the initial state
+        grid[1][0] = 1;
+        grid[2][1] = 1;
+        grid[0][2] = grid[1][2] = grid[2][2] = 1;
+
+        update();
+    </script>
+    
+
+    
 </body>
 </html>
 

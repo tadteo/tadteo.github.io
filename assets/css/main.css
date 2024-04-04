@@ -124,3 +124,10 @@ h1, h2, h3, h4, h5, h6 {
 .content-area {
     padding: 15px;
 }
+
+#myCanvas {
+    width: 100%;
+    max-width: 800px; /* Example max-width */
+    height: auto;
+    display: block; /* Removes bottom space/aligns with the bottom of the container */
+}
