@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
     <div class="container mt-3 mb-3">
@@ -19,17 +21,19 @@
                     {% for link in site.data.links %}
                     <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
                     {% endfor %}
-                </ul>          
+                </ul>
+                ===============
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> - <a href="mailto:tadiellomatteo@gmail.com">tadiellomatteo@gmail.com</a></li>
+                    <li><i class="fab fa-github"></i> - <a href="https://github.com/tadteo">tadteo</a></li>
+                    <li><i class="fab fa-linkedin"></i> - <a href="https://www.linkedin.com/in/matteo-tadiello">matteo-tadiello</a></li>
+                </ul>        
             </div>
             
             <!-- Main content area for all screens -->
             <div class="col-12 col-md-8">
                 {{ content }}
-                <ul class="contact-info">
-                    <li><b>Email:</b> <a href="mailto:tadiellomatteo@gmail.com">tadiellomatteo@gmail.com</a></li>
-                    <li><b>GitHub:</b> <a href="https://github.com/tadteo">tadteo</a></li>
-                    <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/matteo-tadiello">matteo-tadiello</a></li>
-                </ul>
+                
             </div>
         </div>
     </div>

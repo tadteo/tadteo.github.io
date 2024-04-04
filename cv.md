@@ -37,6 +37,8 @@ _March 2019 - June 2019_
 _KTH Royal Institute of Technology, Stockholm, Sweden_  
 _2021-2022_ (Indefinitely paused)
 
+- Fields: Reliability, Safety, Artificial Intelligence, Robotics, Formal Methods, Behaviour Trees, Deep Learning, Reinforcement Learning, Teaching.
+
 ### Master Degree in Autonomous Systems  
 _KTH Royal Institute of Technology, University of Trento_  
 _2018-2020_
@@ -46,6 +48,9 @@ _2018-2020_
 ### Bachelor Degree in Computer Science  
 _University of Trento, Trento, Italy_  
 _2015-2018_
+
+- Subjects: Programming languages, Object Oriented Programming, Functional programming, Software
+engineering, Algorithms and Data Structures...
 
 ## Skills
 {: .cv-section}
@@ -58,11 +63,12 @@ _2015-2018_
 ## Volunteer Work
 {: .cv-section}
 
-- **Lead The Future Mentor**, Trento, Italy (2020 - 2023)
-- **CoderDojo Master**, Trento, Italy (2016 - 2019)
+- **Lead The Future Mentor**, (2020 - present): Actively mentoring Italian STEM talents, enhancing their professional and personal growth. Facilitating connections with global industry leaders and academic experts, fostering a collaborative environment
+- **CoderDojo Master**, Trento, Italy (2016 - 2019): Volunteer Computer Science teacher (High school students)
+
 
 ## Publications
 {: .cv-section}
 
-- Verifying Safety of Behaviour Trees in Event-B, 2022
-- Comparison of Collision Avoidance Algorithm for Autonomous Multi-Agent Systems, 2020
+- **Verifying Safety of Behaviour Trees in Event-B**: Matteo Tadiello and Elena Troubitsyna, 2022 In Proceedings FMAS2022 ASYDE2022, arXiv:2209.13181
+- **Comparison of Collision Avoidance Algorithm for Autonomous Multi-Agent Systems**: Matteo Tadiello and Marco Moletta, 2020 IEEE 44th Annual Computers, Software, and Applications Conference (COMPSAC)

@@ -20,6 +20,14 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-light);
     font-family: 'Roboto', sans-serif; /* Applying the Roboto font */
+    line-height: 1.6; /* Enhances readability */
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500; /* Differentiates headings from body text */
 }
 
 /* Sidebar styles */
@@ -31,7 +39,7 @@ body {
 
 .profile-sidebar img {
     border-radius: 50%; /* Circular image */
-    width: 200px; /* Increase the size of the picture */
+    width: 220px; /* Increase the size of the picture */
     margin-bottom: 1.25rem;
 }
 
@@ -62,13 +70,15 @@ body {
 .cv-section {
     border-left: 4px solid var(--accent-color); /* Adds a colored line for emphasis */
     padding-left: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem; /* Adds spacing between sections */
+
 }
 
 .cv-section h2 {
-    font-family: 'Roboto', sans-serif; /* Title font */
-    font-weight: 700; /* Making titles bolder */
-    color: var(--text-light); /* Ensuring title color is visible on all backgrounds */
+    background-color: var(--accent-color); /* Adds a background color to section titles */
+    color: var(--text-light); /* Ensures text is visible on the accent background */
+    padding: 5px 10px;
+    display: inline-block; /* Allows background color to fit content */
 }
 
 .cv-section p,
@@ -108,4 +118,9 @@ body {
     list-style-type: none; /* Removes bullets from list */
     padding-left: 0; /* Aligns with the rest of the sidebar content */
     margin-top: 1rem; /* Adds space above the contact section */
+}
+
+/* Ensure consistent padding within the content area */
+.content-area {
+    padding: 15px;
 }
