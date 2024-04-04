@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
 title: Matteo Tadiello's homepage
 description: Personal Website of Matteo Tadiello
+baseurl: ""  # you can leave this empty if your site is hosted at the root

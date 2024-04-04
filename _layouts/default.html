@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+</head>
+<body>
+  <div class="profile-sidebar">
+    <img src="{{ '/assets/images/profile_pic_matteo.jpeg' | prepend: site.baseurl }}" alt="Matteo Tadiello">
+    <h2>Matteo Tadiello</h2>
+    <p>Personal Website of Matteo Tadiello</p>
+    <ul class="nav-links">
+      <li><a href="{{ '/' | prepend: site.baseurl }}">Home</a></li>
+      <li><a href="{{ '/cv.md' | prepend: site.baseurl }}">CV</a></li>
+      <!-- Add more navigation links here -->
+    </ul>
+  </div>
+  <div class="content-main">
+    {{ content }}
+  </div>
+  <div class="clearfix"></div>
+</body>
+</html>
