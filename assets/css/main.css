@@ -39,4 +39,26 @@
     color: #000; /* Change the color based on your preference */
 }
 
-/* Add more custom styles below as needed */
+/* Color Palette */
+
+:root {
+    --main-bg-color: #222831;
+    --sidebar-color: #31363F;
+    --accent-color: #76ABA8;
+    --text-light: #EEEEEE;
+    /* Or use the second color palette */
+    /* --main-bg-color: #008DDA;
+    --sidebar-color: #41C9E2;
+    --accent-color: #ACE2E1;
+    --text-light: #F7EEDD; */
+}
+body {
+    background-color: var(--main-bg-color);
+    color: var(--text-light);
+}
+.profile-sidebar {
+    background-color: var(--sidebar-color);
+}
+a, a:visited, a:hover {
+    color: var(--accent-color);
+}
