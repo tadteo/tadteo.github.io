@@ -4,8 +4,10 @@ title: Matteo Tadiello's CV
 ---
 
 # Curriculum Vitae
+{: .cv-section}
 
 ## Experience
+{: .cv-section}
 
 ### Flox Robotics, Stockholm, Sweden
 **Co-Founder, Head of AI and Automation**  
@@ -29,6 +31,7 @@ _March 2019 - June 2019_
 - Full-time teacher of Computer Science.
 
 ## Education
+{: .cv-section}
 
 ### PhD Student in Dependable Autonomous Systems  
 _KTH Royal Institute of Technology, Stockholm, Sweden_  
@@ -45,6 +48,7 @@ _University of Trento, Trento, Italy_
 _2015-2018_
 
 ## Skills
+{: .cv-section}
 
 - **Programming Languages**: Python, C++, Java, JavaScript, C#
 - **AI Frameworks**: TensorFlow, PyTorch, OpenAI Gym
@@ -52,11 +56,13 @@ _2015-2018_
 - **Other**: Office suites, Unity, IoT development, FullStack development
 
 ## Volunteer Work
+{: .cv-section}
 
 - **Lead The Future Mentor**, Trento, Italy (2020 - 2023)
 - **CoderDojo Master**, Trento, Italy (2016 - 2019)
 
 ## Publications
+{: .cv-section}
 
 - Verifying Safety of Behaviour Trees in Event-B, 2022
 - Comparison of Collision Avoidance Algorithm for Autonomous Multi-Agent Systems, 2020

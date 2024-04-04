@@ -1,0 +1,17 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# If using Bundler, uncomment the following line
+# .bundle/
+
+# Exclude any local configuration file you might have
+# _config_local.yml
+
+# Exclude system-specific files
+.DS_Store
+Thumbs.db
+
+# Exclude files containing sensitive information
+.env

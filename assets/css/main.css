@@ -1,64 +1,111 @@
-.profile-sidebar {
-    float: left;
-    width: 30%;
-    padding-right: 20px;
-    box-sizing: border-box;
-}
-
-.profile-sidebar img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%; /* Optional: if you want rounded images */
-}
-
-.content-main {
-    float: right;
-    width: 70%;
-    box-sizing: border-box;
-}
-
-/* Clearfix */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Style for navigation links */
-.nav-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.nav-links li {
-    padding: 5px 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #000; /* Change the color based on your preference */
-}
+/* Importing the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Color Palette */
-
 :root {
+    /* Default color palette */
     --main-bg-color: #222831;
     --sidebar-color: #31363F;
     --accent-color: #76ABA8;
     --text-light: #EEEEEE;
-    /* Or use the second color palette */
+
+    /* Alternative color palette */
     /* --main-bg-color: #008DDA;
     --sidebar-color: #41C9E2;
     --accent-color: #ACE2E1;
     --text-light: #F7EEDD; */
 }
+
 body {
     background-color: var(--main-bg-color);
     color: var(--text-light);
+    font-family: 'Roboto', sans-serif; /* Applying the Roboto font */
 }
+
+/* Sidebar styles */
 .profile-sidebar {
     background-color: var(--sidebar-color);
+    padding: 1.25rem;
+    text-align: center;
 }
-a, a:visited, a:hover {
+
+.profile-sidebar img {
+    border-radius: 50%; /* Circular image */
+    width: 200px; /* Increase the size of the picture */
+    margin-bottom: 1.25rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0; /* Removes default margin */
+}
+
+.nav-links li {
+    padding: 0.3125rem 0;
+}
+
+.nav-links a,
+.contact-info a { /* Accent color for contact links as well */
+    text-decoration: none;
     color: var(--accent-color);
+}
+
+/* Ensuring consistent margin and padding in the contact section */
+.contact-info {
+    margin-top: 2rem;
+    padding: 0;
+    list-style-type: none; /* Removing list styling */
+}
+
+/* CV section styles for better readability */
+.cv-section {
+    border-left: 4px solid var(--accent-color); /* Adds a colored line for emphasis */
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cv-section h2 {
+    font-family: 'Roboto', sans-serif; /* Title font */
+    font-weight: 700; /* Making titles bolder */
+    color: var(--text-light); /* Ensuring title color is visible on all backgrounds */
+}
+
+.cv-section p,
+.cv-section li {
+    font-weight: 400; /* Regular font weight for text */
+}
+
+/* Responsive text alignment for larger screens */
+@media (min-width: 768px) {
+    .profile-sidebar {
+        text-align: center; /* Keep text centered on medium screens */
+    }
+}
+
+/* Adjust the sidebar content alignment */
+@media (max-width: 767.98px) {
+    .profile-sidebar {
+        text-align: center;
+    }
+    .nav-links,
+    .contact-info {
+        text-align: center;
+    }
+}
+
+/* Additional responsive styles */
+
+/* Style adjustments for navigation and contact links */
+.nav-links a,
+.contact-info a { /* Apply accent color to both nav and contact links */
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+/* Specific styles for the contact section */
+.contact-info {
+    list-style-type: none; /* Removes bullets from list */
+    padding-left: 0; /* Aligns with the rest of the sidebar content */
+    margin-top: 1rem; /* Adds space above the contact section */
 }
