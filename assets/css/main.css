@@ -54,7 +54,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links a,
-.contact-info a { /* Accent color for contact links as well */
+.contact-info a,
+a { /* Accent color for contact links as well */
     text-decoration: none;
     color: var(--accent-color);
 }
